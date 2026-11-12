@@ -2,251 +2,147 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Newspaper</title>
+    <title>Simple Calculator</title>
 
     <style>
         body {
-            background-color: beige;
+            background-color: lightgray;
             font-family: Arial, sans-serif;
         }
 
-        .container {
-            width: 60%;
-            margin: auto;
-            border: 2px solid black;
-            border-radius: 12px;
-            overflow: hidden;
+        h3 {
+            text-align: center;
+            margin-top: 15px;
         }
 
-        header {
-            background-color: navy;
+        .calculator {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        input {
+            display: block;
+            margin: 7px auto;
+            padding: 5px;
+            width: 130px;
+        }
+
+        button {
+            background-color: blue;
             color: white;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+            border: none;
+            padding: 7px;
+            margin: 3px;
+            cursor: pointer;
         }
 
-        .details {
-            position: absolute;
-            left: 10px;
-            top: 30px;
-            font-size: 10px;
-            font-weight: bold;
+        button:hover {
+            background-color: darkblue;
         }
 
-        .heading {
-            text-align: center;
-        }
-
-        .heading h1 {
-            font-size: 24px;
-            margin: 0;
-        }
-
-        .heading p {
-            font-size: 12px;
-        }
-
-        .national {
-            background-color: lightblue;
-            padding: 10px;
-        }
-
-        .national h3 {
-            color: navy;
-        }
-
-        .news-container {
-            display: flex;
-            gap: 15px;
-            padding: 10px;
-        }
-
-        .news {
-            background-color: white;
-            padding: 10px;
-            border-left: 3px solid brown;
-            flex: 1;
-        }
-
-        .news h4 {
-            margin-bottom: 10px;
-        }
-
-        .news p {
-            font-size: 12px;
-        }
-
-        .quick {
-            background-color: #ffff80;
-            color: brown;
-            padding: 10px;
-            border-left: 3px solid green;
-        }
-
-        .quick h3 {
-            font-size: 14px;
-        }
-
-        .quick p {
-            font-size: 12px;
-        }
-
-        .figure {
-            background-color: lightslategray;
-            border: 7px solid darkred;
-            border-radius: 15px;
-            margin: 10px 25px;
-            padding: 10px;
-            text-align: center;
-            color: yellow;
-        }
-
-        .figure h3 {
-            font-size: 14px;
-        }
-
-        .figure img {
-            width: 55%;
-            height: 230px;
-            border-radius: 12px;
-        }
-
-        .figure p {
-            font-size: 12px;
-            margin: 5px;
-        }
-
-        .sports {
-            text-align: center;
-            padding-bottom: 60px;
-        }
-
-        table {
-            width: 40%;
-            margin: auto;
-            border-collapse: collapse;
-            text-align: left;
-            background-color: pink;
-            color: darkred;
-        }
-
-        th, td {
-            border: 1px solid darkred;
-            padding: 10px;
-            font-size: 12px;
-        }
-
-        th {
-            background-color: darkred;
-            color: white;
-        }
-
-        footer {
-            background-color: gray;
-            color: white;
-            text-align: center;
-            padding: 18px;
-            font-size: 12px;
+        #result {
+            margin-top: 15px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <div>
+        Name:Narisetty Puneetha<br>
+        USN:1BI24CS137
+    </div>
 
-        <header>
+    <h3>Simple Calculator</h3>
 
-            <div class="details">
-                NAME : Narisetty Puneetha<br>
-                USN : 1BI24CS137
-            </div>
+    <div class="calculator">
 
-            <div class="heading">
-                <h1>DAILY NEWS</h1>
-                <p>Today's Latest News</p>
-            </div>
+        <input type="number" id="num1" placeholder="First number">
 
-        </header>
+        <input type="number" id="num2" placeholder="Second number">
 
-        <section class="national">
+        <br>
 
-            <h3>National News</h3>
+        <button onclick="calculate('sum')">Sum</button>
 
-            <div class="news-container">
+        <button onclick="calculate('difference')">Difference</button>
 
-                <div class="news">
-                    <h4>India Makes Progress in Technology</h4>
-                    <p>
-                        India is making rapid progress in
-                        technology and digital services.
-                    </p>
-                </div>
+        <button onclick="calculate('product')">Product</button>
 
-                <div class="news">
-                    <h4>Education News</h4>
-                    <p>
-                        Many students are using modern
-                        technology for better education.
-                    </p>
-                </div>
+        <button onclick="calculate('quotient')">Quotient</button>
 
-            </div>
-        </section>
+        <button onclick="calculate('remainder')">Remainder</button>
 
-        <section class="quick">
+        <button onclick="calculate('power')">Power</button>
 
-            <h3>Quick News</h3>
+        <button onclick="calculate('sqrt')">Square Root</button>
 
-            <p>
-                Sports and weather updates are available here.
-            </p>
+        <button onclick="calculate('square')">Square</button>
 
-        </section>
-
-        <section class="figure">
-
-            <h3>News Figure</h3>
-
-            <img src="newspaper1.jpg" alt="Newspaper Image">
-
-            <p>Today's News</p>
-
-        </section>
-
-        <section class="sports">
-
-            <h3>Sports Results</h3>
-
-            <table>
-
-                <tr>
-                    <th>Sport</th>
-                    <th>Winner</th>
-                </tr>
-
-                <tr>
-                    <td>Cricket</td>
-                    <td>India</td>
-                </tr>
-
-                <tr>
-                    <td>Football</td>
-                    <td>Brazil</td>
-                </tr>
-
-            </table>
-
-        </section>
-
-        <footer>
-            © 2026 Daily News | All Rights Reserved
-        </footer>
+        <p id="result">Result:</p>
 
     </div>
+
+    <script>
+
+        function calculate(operation) {
+
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            let result;
+
+            if (document.getElementById("num1").value === "" ||
+                (operation !== "sqrt" && operation !== "square" &&
+                 document.getElementById("num2").value === "")) {
+
+                document.getElementById("result").innerHTML =
+                    "Please enter the required number(s)";
+                return;
+            }
+
+            switch(operation) {
+
+                case "sum":
+                    result = a + b;
+                    break;
+
+                case "difference":
+                    result = a - b;
+                    break;
+
+                case "product":
+                    result = a * b;
+                    break;
+
+                case "quotient":
+                    result = b !== 0 ? a / b : "Cannot divide by zero";
+                    break;
+
+                case "remainder":
+                    result = b !== 0 ? a % b : "Cannot divide by zero";
+                    break;
+
+                case "power":
+                    result = Math.pow(a, b);
+                    break;
+
+                case "sqrt":
+                    result = a >= 0 ? Math.sqrt(a) : "Invalid input";
+                    break;
+
+                case "square":
+                    result = a * a;
+                    break;
+
+            }
+
+            document.getElementById("result").innerHTML =
+                "Result: " + result;
+
+        }
+
+    </script>
 
 </body>
 </html>
