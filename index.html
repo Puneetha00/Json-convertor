@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .container {
+            background-color: rgb(213, 138, 138);
+            height: 500px;
+            margin: 20px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .info {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            color: teal;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            color: #333;
+        }
+
+        form {
+            background-color: #eaf3e5;
+            width: 260px;
+            margin: 18px auto;
+            padding: 20px;
+            color: #385b55;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 7px 3px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 165px;
+            height: 22px;
+            background-color: #dce8d4;
+            border: 1px solid gray;
+        }
+
+        textarea {
+            background-color: #dce8d4;
+            border: 1px solid gray;
+        }
+
+        select {
+            background-color: #dce8d4;
+            padding: 4px;
+        }
+
+        .buttons {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        button {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="info">
+            Name: Puneetha<br>
+            USN: 1B24CS137
+        </div>
+
+        <h2>Registration Form</h2>
+
+        <form>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Course:</td>
+                    <td>
+                        <select name="course">
+                            <option>BCA</option>
+                            <option>BBA</option>
+                            <option>BCom</option>
+                            <option>BSc</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Skills:</td>
+                    <td>
+                        <input type="checkbox" name="skills" value="HTML"> HTML
+                        <input type="checkbox" name="skills" value="CSS"> CSS
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Address:</td>
+                    <td>
+                        <textarea rows="2" cols="14"></textarea>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="buttons">
+                <button type="submit">Register</button>
+                <button type="reset">Clear</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
