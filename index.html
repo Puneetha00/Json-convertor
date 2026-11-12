@@ -2,155 +2,188 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registration Form</title>
-
+    <title>Time Table</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-        }
+        
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
 
-        .container {
-            background-color: rgb(213, 138, 138);
-            height: 500px;
-            margin: 20px;
-            padding: 10px;
-            position: relative;
-        }
+h5 {
+    text-align: left;
+}
 
-        .info {
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            color: teal;
-            font-size: 12px;
-            font-weight: bold;
-        }
+h2, h3 {
+    text-align: center;
+}
 
-        h2 {
-            text-align: center;
-            margin-top: 0;
-            color: #333;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
 
-        form {
-            background-color: #eaf3e5;
-            width: 260px;
-            margin: 18px auto;
-            padding: 20px;
-            color: #385b55;
-        }
+th, td {
+    border: 1px solid #71818b;
+    padding: 10px 5px;
+    font-size: 13px;
+}
 
-        table {
-            width: 100%;
-        }
+th {
+    background-color: #718da7;
+    color: white;
+}
 
-        td {
-            padding: 7px 3px;
-        }
+/* Odd days */
+.odd td {
+    background-color: #b1bec4;
+}
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 165px;
-            height: 22px;
-            background-color: #dce8d4;
-            border: 1px solid gray;
-        }
+/* Even days */
+.even td {
+    background-color: #b4cbb8;
+}
 
-        textarea {
-            background-color: #dce8d4;
-            border: 1px solid gray;
-        }
+/* Tea break */
+.break {
+    background-color: #c6383d;
+    color: darkred;
+    font-weight: bold;
+}
 
-        select {
-            background-color: #dce8d4;
-            padding: 4px;
-        }
+/* Mini project */
+.mini {
+    background-color: #c5c0bd !important;
+    font-weight: bold;
+}
 
-        .buttons {
-            text-align: center;
-            padding-top: 10px;
-        }
+/* Lab periods */
+.lab {
+    background-color: #b9b3c1 !important;
+    font-weight: bold;
+}
 
-        button {
-            padding: 5px;
-        }
+/* End row */
+.end {
+    background-color: #718da7;
+    color: pink;
+    font-weight: bold;
+    padding: 15px;
+}
+
     </style>
 </head>
-
 <body>
 
-    <div class="container">
+    <h5>Name: Narisetty Puneetha<br>
+    USN: 1BI24CS137</h5>
 
-        <div class="info">
-            Name: Puneetha<br>
-            USN: 1B24CS137
-        </div>
+    <h2>TIME TABLE</h2>
+    <h3>5th Sem, B Section</h3>
 
-        <h2>Registration Form</h2>
+    <table>
+        <tr>
+            <th>TIME<br>DAYS</th>
+            <th>8:00-9:00</th>
+            <th>9:00-10:00</th>
+            <th>10:00-10:30</th>
+            <th>10:30-11:30</th>
+            <th>11:30-12:30</th>
+            <th>12:30-1:30</th>
+            <th>1:30-2:30</th>
+            <th>2:30-3:30</th>
+            <th>3:30-4:30</th>
+            <th>4:30-5:30</th>
+        </tr>
 
-        <form>
-            <table>
-                <tr>
-                    <td>Name:</td>
-                    <td><input type="text" name="name"></td>
-                </tr>
+        <tr class="odd">
+            <th>MON</th>
+            <td>CNS<br>KNP<br>523</td>
+            <td>TOC<br>SHG<br>523</td>
+            <td rowspan="6" class="break" style="background-color: rgba(99, 25, 25, 0.656);">TEA<br>BREAK</td>
+            <td>AI<br>MJ<br>523</td>
+            <td>SE<br>MH<br>523</td>
+            <td>RM<br>523</td>
+            <td></td>
+            <td colspan="2" class="mini">MINI PROJECT</td>
+            <td></td>
+        </tr>
 
-                <tr>
-                    <td>Email:</td>
-                    <td><input type="email" name="email"></td>
-                </tr>
+        <tr class="even">
+            <th>TUE</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>AI<br>MJ<br>521</td>
+            <td>SE<br>MH<br>521</td>
+            <td>TOC<br>SHG<br>521</td>
+            <td>CNS<br>KNP<br>521</td>
+            <td></td>
+        </tr>
 
-                <tr>
-                    <td>Password:</td>
-                    <td><input type="password" name="password"></td>
-                </tr>
+        <tr class="odd">
+            <th>WED</th>
+            <td>RM<br>523</td>
+            <td>SE<br>MH<br>523</td>
+            <td>TOC<br>SHG<br>523</td>
+            <td>AI<br>MJ<br>523</td>
+            <td></td>
+            <td colspan="2" class="lab">
+                WT LAB / CNS LAB<br>
+                B1+B2 / B3+B4<br>
+                503 / 527A
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
 
-                <tr>
-                    <td>Gender:</td>
-                    <td>
-                        <input type="radio" name="gender" value="Male"> Male
-                        <input type="radio" name="gender" value="Female"> Female
-                    </td>
-                </tr>
+        <tr class="even">
+            <th>THU</th>
+            <td></td>
+            <td></td>
+            <td>Online<br>EVS<br>KRS</td>
+            <td></td>
+            <td></td>
+            <td colspan="2" class="mini">MINI PROJECT</td>
+            <td></td>
+            <td></td>
+        </tr>
 
-                <tr>
-                    <td>Course:</td>
-                    <td>
-                        <select name="course">
-                            <option>BCA</option>
-                            <option>BBA</option>
-                            <option>BCom</option>
-                            <option>BSc</option>
-                        </select>
-                    </td>
-                </tr>
+        <tr class="odd">
+            <th>FRI</th>
+            <td colspan="2" class="lab">
+                WT LAB / CNS LAB<br>
+                B3+B4 / B1+B2<br>
+                503 / 527A
+            </td>
+            <td>TOC<br>SHG<br>527C</td>
+            <td>CNS<br>KNP<br>527C</td>
+            <td></td>
+            <td>RM<br>527C</td>
+            <td>SE<br>MH<br>527C</td>
+            <td></td>
+            <td></td>
+        </tr>
 
-                <tr>
-                    <td>Skills:</td>
-                    <td>
-                        <input type="checkbox" name="skills" value="HTML"> HTML
-                        <input type="checkbox" name="skills" value="CSS"> CSS
-                    </td>
-                </tr>
+        <tr class="even">
+            <th>SAT</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
 
-                <tr>
-                    <td>Address:</td>
-                    <td>
-                        <textarea rows="2" cols="14"></textarea>
-                    </td>
-                </tr>
-            </table>
-
-            <div class="buttons">
-                <button type="submit">Register</button>
-                <button type="reset">Clear</button>
-            </div>
-
-        </form>
-
-    </div>
+        <tr>
+            <td colspan="11" class="end">End Of Time Table</td>
+        </tr>
+    </table>
 
 </body>
 </html>
